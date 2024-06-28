@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
+import { Routes, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -7,54 +8,98 @@ const selectDarkMode = (state) => state.darkMode.value;
 
 
 const FirstRow = styled.div`
-    width:100%;
+    width:96vw;   
+    padding: 12px 2vw;
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 `
 
 const LogoWrapper = styled.div`
     display:flex;
-    justify-content:space-between;
+    justify-content: flex-start;
     align-items:center;
-    width:96%;
-    padding: 12px 2%;
+    gap: 20px;
+
+    .logoWrapper {
+        font-size:50px;
+    }
+
+    nav {
+        height:100%;
+    }
+
+    .headerUl {
+        display: flex;
+        height:100%;
+        gap: 20px;
+        align-items: flex-end;
+
+
+        li {
+            font-size : 18px;
+        }
+    }
 `
 
+const QuickUserMenu = styled.div`
+    display:flex;
+    padding-right: 20px;
+    
+        align-items: flex-end;
+    gap:15px;
+    .header_search{
+    }
+    .header_userMenu{
+        display:flex;
+        gap: 15px;
+    }
+`
 
+const SecondRow = styled.div`
+ 
+`
 
 export default function Header(props){
     let darkMode = useSelector(selectDarkMode);
     let dispatch = useDispatch()
 
-
-
-
+    let navigate = useNavigate()
 
     return (
         <header>
             <FirstRow>
                 <LogoWrapper>
                     <div>
-                        <div>DOCNET</div>
-                        <nav>
-                            <ul className="HaederUl">
-                                <li>패션</li>
-                                <li>브랜드</li>
-                                <li>음악</li>
-                                <li>예술</li>
-                                <li>건축</li>
-                                <li>라이프</li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div>
-                        <div>검색</div>
-                        <div>
-                            <div>유저</div>
-                            <div>모드</div>
-                            <div>메뉴</div>
+                        <div className="logoWrapper">
+                            <div class='headerLogo'></div>
+                            <h2>DOCNET</h2>
                         </div>
                     </div>
+                    <nav>
+                        <ul className="headerUl">
+                            <li><a onClick={() => {navigate('/fashion')}}>패션</a></li>
+                            <li><a onClick={() => {navigate('/bradn')}}>브랜드</a></li>
+                            <li><a onClick={() => {navigate('/music')}}>음악</a></li>
+                            <li><a onClick={() => {navigate('/art')}}>예술</a></li>
+                            <li><a onClick={() => {navigate('/architecture ')}}>건축</a></li>
+                            <li><a onClick={() => {navigate('/lift')}}>라이프</a></li>
+                        </ul>
+                    </nav>
                 </LogoWrapper>
+                <QuickUserMenu>
+                    <div className="header_search">검색</div>
+                    <div className="header_userMenu">
+                        <div>유저</div>
+                        <div>모드</div>
+                        <div>메뉴</div>
+                    </div>
+                </QuickUserMenu>
             </FirstRow>
+            <SecondRow>
+
+            </SecondRow>
         </header>
     )
 }
