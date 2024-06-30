@@ -24,6 +24,7 @@ const LogoWrapper = styled.div`
 
     .logoWrapper {
         font-size:50px;
+
     }
 
     nav {
@@ -39,6 +40,7 @@ const LogoWrapper = styled.div`
 
         li {
             font-size : 18px;
+            color: #727272;
         }
     }
 `
@@ -62,6 +64,8 @@ const SecondRow = styled.div`
 `
 
 export default function Header(props){
+    // let page = 
+
     let darkMode = useSelector(selectDarkMode);
     let dispatch = useDispatch()
 
@@ -73,18 +77,20 @@ export default function Header(props){
                 <LogoWrapper>
                     <div>
                         <div className="logoWrapper">
-                            <div class='headerLogo'></div>
-                            <h2>DOCNET</h2>
+                            <h2 className="hide-text">DOCNET</h2>
+                            <div class='headerLogo'>
+                                <a className='btn' onClick={()=> {navigate('/')}}>DOCNET</a>
+                            </div>
                         </div>
                     </div>
                     <nav>
                         <ul className="headerUl">
-                            <li><a onClick={() => {navigate('/fashion')}}>패션</a></li>
-                            <li><a onClick={() => {navigate('/bradn')}}>브랜드</a></li>
-                            <li><a onClick={() => {navigate('/music')}}>음악</a></li>
-                            <li><a onClick={() => {navigate('/art')}}>예술</a></li>
-                            <li><a onClick={() => {navigate('/architecture ')}}>건축</a></li>
-                            <li><a onClick={() => {navigate('/lift')}}>라이프</a></li>
+                            <li><a className='btn btn-black' onClick={() => {navigate('/fashion')}}>패션</a></li>
+                            <li><a className='btn btn-black' onClick={() => {navigate('/bradn')}}>브랜드</a></li>
+                            <li><a className='btn btn-black' onClick={() => {navigate('/music')}}>음악</a></li>
+                            <li><a className='btn btn-black' onClick={() => {navigate('/art')}}>예술</a></li>
+                            <li><a className='btn btn-black' onClick={() => {navigate('/architecture ')}}>건축</a></li>
+                            <li><a className='btn btn-black' onClick={() => {navigate('/lift')}}>라이프</a></li>
                         </ul>
                     </nav>
                 </LogoWrapper>
