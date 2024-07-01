@@ -23,7 +23,7 @@ const LogoWrapper = styled.div`
     gap: 20px;
 
     .logoWrapper {
-        font-size:50px;
+        font-size:60px;
 
     }
 
@@ -48,11 +48,12 @@ const LogoWrapper = styled.div`
 const QuickUserMenu = styled.div`
     display:flex;
     padding-right: 20px;
-    
-        align-items: flex-end;
+    align-items: flex-end;
     gap:15px;
+    
     .header_search{
     }
+
     .header_userMenu{
         display:flex;
         gap: 15px;
@@ -78,7 +79,7 @@ export default function Header(props){
                     <div>
                         <div className="logoWrapper">
                             <h2 className="hide-text">DOCNET</h2>
-                            <div class='headerLogo'>
+                            <div className='headerLogo'>
                                 <a className='btn' onClick={()=> {navigate('/')}}>DOCNET</a>
                             </div>
                         </div>
@@ -86,7 +87,7 @@ export default function Header(props){
                     <nav>
                         <ul className="headerUl">
                             <li><a className='btn btn-black' onClick={() => {navigate('/fashion')}}>패션</a></li>
-                            <li><a className='btn btn-black' onClick={() => {navigate('/bradn')}}>브랜드</a></li>
+                            <li><a className='btn btn-black' onClick={() => {navigate('/brand')}}>브랜드</a></li>
                             <li><a className='btn btn-black' onClick={() => {navigate('/music')}}>음악</a></li>
                             <li><a className='btn btn-black' onClick={() => {navigate('/art')}}>예술</a></li>
                             <li><a className='btn btn-black' onClick={() => {navigate('/architecture ')}}>건축</a></li>
