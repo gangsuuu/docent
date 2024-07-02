@@ -6,7 +6,7 @@ import Content from './component/Content';
 import Footer from './component/common/Footer';
 function App() {
   
-  const tests = ['fashion','brand','music','art','architecture','life']
+  const categories = ['fashion','brand','music','art','architecture','life']
   return (
     <>    
       <Header>
@@ -14,16 +14,16 @@ function App() {
       </Header>
       <div className="App">
           <Routes>
-            <Route path='/*' element={<Content />} />
+            <Route path='*' element={<Content />} />
             {
-              tests.map((test, index)=> {
+              categories.map((category, index)=> {
                 return (
                   <Route 
-                    path={`/${test}`}
-                    element={<Content/>}
+                    path={`/${category}/*`}
+                    element={<Content category={category}/>}
                     key = {index}
-                    test = {test}
-                  />
+                  >
+                  </Route>
                 )
               })
             }

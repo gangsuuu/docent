@@ -75,11 +75,11 @@ export default function PinContainer () {
                     <img src='' alt=''/>
                 </div>
                 <div className='pinedContent'>
-                    <div class='pined_categori'>
+                    <div className='pined_categori'>
                         <p>fashion</p>
                     </div>
-                    <div class='pined_title'>
-                        <div class='pined_title__wraper'>
+                    <div className='pined_title'>
+                        <div className='pined_title__wraper'>
                             <h3>제목제목제목제목제목제목제목제목제목제목</h3>
                         </div>
                     </div>

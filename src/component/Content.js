@@ -15,13 +15,27 @@ const Contents = styled.section`
 const Title = styled.h2`
 `
 export default function Content (props) {
+    console.log(props.category)
     return (
         <Contents>
             <PinContainer>
             </PinContainer>
-            {/* <Routes>
+            <Routes>
+                <Route 
+                    path='/' 
+                    element={<ContentList></ContentList>}
+                />
+                <Route 
+                    path='/detail' 
+                    element={<div>디테일페이지 입니다 </div>}
+                />
+                <Route 
+                    path='/*
+                    ' 
+                    element={<div>디테일페이지 입니다 </div>}
+                />
 
-            </Routes> */}
+            </Routes>
         </Contents>
     )
 }
