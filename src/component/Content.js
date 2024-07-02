@@ -15,15 +15,17 @@ const Contents = styled.section`
 const Title = styled.h2`
 `
 export default function Content (props) {
-    console.log(props.category)
     return (
         <Contents>
+            
+
             <PinContainer>
             </PinContainer>
             <Routes>
                 <Route 
                     path='/' 
-                    element={<ContentList></ContentList>}
+                    element={
+                    <ContentList></ContentList>}
                 />
                 <Route 
                     path='/detail' 
@@ -48,3 +50,4 @@ const Article = () => {
         </div>
     )
 }
+

@@ -14,7 +14,7 @@ function App() {
       </Header>
       <div className="App">
           <Routes>
-            <Route path='*' element={<Content />} />
+            <Route path='/' element={<Content />} />
             {
               categories.map((category, index)=> {
                 return (
@@ -36,3 +36,10 @@ function App() {
 }
 
 export default App;
+
+const IndexCarousel = () => {
+  return (
+      <>
+      </>
+  )
+}
