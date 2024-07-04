@@ -6,6 +6,9 @@ let width = 240 / 100 * 96
 let widthLeft = (width / 100 * 30)
 let widthRight = (width / 100 * 70) - 15
 const Aside = styled.aside`
+    position : sticky;
+    top:85px;
+    left:0;
     width: ${totalWidth + 'px'} ;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -65,27 +68,32 @@ const PinedContent = styled.div`
     }
 `
 
-
+let count = 5
 export default function PinContainer () {
 
     return (
         <Aside className="Pined-content">
-            <PinedContent>
-                <div className='pinedImgWrapper'>
-                    <img src='' alt=''/>
-                </div>
-                <div className='pinedContent'>
-                    <div className='pined_categori'>
-                        <p>fashion</p>
-                    </div>
-                    <div className='pined_title'>
-                        <div className='pined_title__wraper'>
-                            <h3>제목제목제목제목제목제목제목제목제목제목</h3>
+            {
+                Array(5).fill(
+                    <PinedContent>
+                        <div className='pinedImgWrapper'>
+                            <img src='' alt=''/>
                         </div>
-                    </div>
+                        <div className='pinedContent'>
+                            <div className='pined_categori'>
+                                <p>fashion</p>
+                            </div>
+                            <div className='pined_title'>
+                                <div className='pined_title__wraper'>
+                                    <h3>제목제목제목제목제목제목제목제목제목제목</h3>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </PinedContent>
+                )
 
-                </div>
-            </PinedContent>
+            }
         </Aside>
     )
 }

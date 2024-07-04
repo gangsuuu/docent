@@ -42,6 +42,12 @@ table {
 	border-spacing: 0;
 }
 
+header {
+	position: sticky;
+	top: 0;
+	background-color: #ffffff;
+	z-index: 20;
+}
 .btn {
 	cursor: pointer;
 }
@@ -58,3 +64,108 @@ table {
 	overflow: hidden;
 	clip-path: polygon(0 0, 0 0, 0 0);
 }
+.content_lists hr{
+	margin: 20px 0;
+	border-top: 1px solid #eee;
+	border: 0;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+.content_list{
+	width: 1000px;
+	height: 400px;
+	/* border: 1px solid #000; */
+}
+
+.content_list_wrapper {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	gap: 20px;
+}
+
+.content_list_imgesWrapper{
+	width: 60%;
+	height: 100%;
+}
+.content_list_img {
+	width: 100%;
+	height: 100%;
+}
+
+.content_list_img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.content_list_contents{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.content_list_upper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.content_list_category a{
+	font-size: 14px;
+	color: blue;
+	cursor: pointer;
+}
+.content_list_title {
+	display: flex;
+	position: relative;
+}
+.content_list_contents h2 {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.content_list_title a {
+	color: black;
+	cursor: pointer;
+	font-size: 25px;
+}
+
+.content_list_title a:hover {
+	color: gray;
+}
+
+.content_list_extract {
+	font-size: 17px;
+	color: gray;
+}
+
+.content_list_infoWrapper {
+	display: flex;
+	gap: 7px;
+	font-size: 14px;
+	color: gray;
+}
+ 
+.content_list_bottom{
+	width: 100%;
+	display: flex;
+	gap: 10px;
+}
+.content_list_hashs{
+	display: flex;
+	gap: 10px;
+}
+.content_list_hash a{ 
+	cursor: pointer;
+}
+.content_list_likeWrapper {
+	display: flex;
+
+}
+

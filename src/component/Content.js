@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PinContainer from "./PinContainer";
-import ContentList from "./ContentList.js";
+import ContentItem from "./ContentItem.js";
 import { Route, Routes } from "react-router-dom";
 
 
@@ -8,7 +8,6 @@ const Contents = styled.section`
     display: flex;
     width: 96vw;
     padding : 0 2vw;
-    height : 500px;
     gap: 40px;
 `
 
@@ -24,8 +23,7 @@ export default function Content (props) {
             <Routes>
                 <Route 
                     path='/' 
-                    element={
-                    <ContentList></ContentList>}
+                    element={<ContentItem></ContentItem>}
                 />
                 <Route 
                     path='/detail' 
