@@ -74,8 +74,9 @@ export default function PinContainer () {
     return (
         <Aside className="Pined-content">
             {
-                Array(5).fill(
-                    <PinedContent>
+                Array(5).fill(0).map( 
+                    (_, index) => 
+                    <PinedContent key={index}>
                         <div className='pinedImgWrapper'>
                             <img src='' alt=''/>
                         </div>
@@ -91,10 +92,10 @@ export default function PinContainer () {
         
                         </div>
                     </PinedContent>
+
                 )
 
             }
         </Aside>
     )
 }
-

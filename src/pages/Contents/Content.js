@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import PinContainer from "./PinContainer";
-import ContentItem from "./ContentItem.js";
+import PinContainer from "../../component/PinContainer.js";
+import ContentItem from "../../component/ContentItem.js";
 import { Route, Routes } from "react-router-dom";
+import ContentDetail from "./ContentDetail.js";
 
 
 const Contents = styled.section`
@@ -16,10 +17,9 @@ const Contents = styled.section`
 const Title = styled.h2`
 `
 export default function Content (props) {
+
     return (
         <Contents>
-            
-
             <PinContainer>
             </PinContainer>
             <Routes>
@@ -28,17 +28,12 @@ export default function Content (props) {
                     element={<ContentItem></ContentItem>}
                 />
                 <Route 
-                    path='/detail' 
-                    element={<div>디테일페이지 입니다 </div>}
+                    path='detail' 
+                    element={<ContentDetail></ContentDetail>}
                 />
-                <Route 
-                    path='/*
-                    ' 
-                    element={<div>디테일페이지 입니다 </div>}
-                />
-
             </Routes>
         </Contents>
+
     )
 }
 

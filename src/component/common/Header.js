@@ -61,8 +61,20 @@ const QuickUserMenu = styled.div`
 `
 
 const SecondRow = styled.div`
- 
+    width:100vw;
 `
+const HeaderRangeWrapper = styled.div`
+    position : relative;
+    width:100vw;
+    height: 9px;
+`
+const HeaderRangePer = styled.div`
+    position : relative;
+    width:0px;
+    height: 9px;
+`
+
+
 
 export default function Header(props){
     // let page = 
@@ -91,7 +103,7 @@ export default function Header(props){
                             <li><a className='btn btn-black' onClick={() => {navigate('/music')}}>음악</a></li>
                             <li><a className='btn btn-black' onClick={() => {navigate('/art')}}>예술</a></li>
                             <li><a className='btn btn-black' onClick={() => {navigate('/architecture ')}}>건축</a></li>
-                            <li><a className='btn btn-black' onClick={() => {navigate('/lift')}}>라이프</a></li>
+                            <li><a className='btn btn-black' onClick={() => {navigate('/life')}}>라이프</a></li>
                         </ul>
                     </nav>
                 </LogoWrapper>
@@ -105,7 +117,9 @@ export default function Header(props){
                 </QuickUserMenu>
             </FirstRow>
             <SecondRow>
-
+                <HeaderRangeWrapper>
+                    <HeaderRangePer></HeaderRangePer>
+                </HeaderRangeWrapper>
             </SecondRow>
         </header>
     )
