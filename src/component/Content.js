@@ -6,9 +6,11 @@ import { Route, Routes } from "react-router-dom";
 
 const Contents = styled.section`
     display: flex;
-    width: 96vw;
+    width: 100vw;
     padding : 0 2vw;
+    max-width: 100%;
     gap: 40px;
+    box-sizing : border-box;
 `
 
 const Title = styled.h2`

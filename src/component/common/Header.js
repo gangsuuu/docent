@@ -8,11 +8,11 @@ const selectDarkMode = (state) => state.darkMode.value;
 
 
 const FirstRow = styled.div`
-    width:96vw;   
+    width:100vw;   
     padding: 12px 2vw;
     display: flex;
+    max-width: 100%;
     justify-content: space-between;
-
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 `
 
