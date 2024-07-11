@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 
-let totalWidth = 240
+export let totalWidth = 240
 let width = 240 / 100 * 96
 let widthLeft = (width / 100 * 30)
 let widthRight = (width / 100 * 70) - 15

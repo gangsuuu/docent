@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { Routes, useNavigate } from "react-router-dom";
 import styled from "styled-components";
@@ -66,24 +67,28 @@ const SecondRow = styled.div`
 const HeaderRangeWrapper = styled.div`
     position : relative;
     width:100vw;
-    height: 9px;
+    height: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1)
 `
 const HeaderRangePer = styled.div`
     position : relative;
-    width:0px;
-    height: 9px;
+    width:90%;
+    height: 100%;
+    background-color : blue;
 `
 
 
 
 export default function Header(props){
-    // let page = 
-
     let darkMode = useSelector(selectDarkMode);
     let dispatch = useDispatch()
 
     let navigate = useNavigate()
 
+
+
+
+    
     return (
         <header>
             <FirstRow>
