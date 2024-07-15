@@ -48,7 +48,6 @@ const LogoWrapper = styled.div`
 
 const QuickUserMenu = styled.div`
     display:flex;
-    padding-right: 20px;
     align-items: flex-end;
     gap:15px;
     

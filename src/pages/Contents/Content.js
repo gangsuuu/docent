@@ -27,7 +27,7 @@ export default function Content (props) {
                     path='/' 
                     element={<ContentItem></ContentItem>}
                 />
-                <Route 
+                <Route
                     path='detail' 
                     element={<ContentDetail></ContentDetail>}
                 />

@@ -1,23 +1,22 @@
 import styled from "styled-components"
 
 
-export let totalWidth = 240
-let width = 240 / 100 * 96
-let widthLeft = (width / 100 * 30)
-let widthRight = (width / 100 * 70) - 15
+export let totalWidth = 20
+// let widthLeft = (width / 100 * 30)
+// let widthRight = (width / 100 * 70) - 15
 const Aside = styled.aside`
     position : sticky;
     top:85px;
     left:0;
-    width: ${totalWidth + 'px'} ;
+    width: 12% ;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     height: 100%;
 `
 const PinedContent = styled.div`
-    width: ${width + 'px'};
+    width: 100%;
     height: 75px;
-    padding : ${  (totalWidth - width)/2 + 'px'};
+    padding : 1%;
     // border-bottom: 1px solid rgba(0 ,0 ,0, 0.1);
     // background-color : rgba(0, 0, 0, 0.1);
     display: flex;
@@ -25,7 +24,7 @@ const PinedContent = styled.div`
     transition : background-color 0.175s;
 
     .pinedImgWrapper{
-        width: ${widthLeft + 'px'};
+        width: 30%;
         height : 100%;
         background-color : rgba(0, 0, 0, 0.2);
     }
@@ -39,15 +38,17 @@ const PinedContent = styled.div`
         color: rgba(0, 0, 0, 0.7);
 
     }
-
+    .pinedContent{
+        width: 70%;
+    }
     .pined_title {
-        width: ${widthRight + 'px'};
+        width: 100%;
         height: 20px;
         overflow: hidden;
         text-wrap: nowrap;
 
         .pined_title__wraper {
-            width: ${widthRight + 'px'};
+            width: 100%;
             height: 100%;
             overflow: hidden;
             text-wrap: nowrap;

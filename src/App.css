@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -70,6 +71,11 @@ header {
 	overflow: hidden;
 	clip-path: polygon(0 0, 0 0, 0 0);
 }
+
+.content_lists {
+	width: 88%;	
+}
+
 .content_lists hr{
 	margin: 20px 0;
 	border-top: 1px solid #eee;
@@ -77,7 +83,7 @@ header {
     border-top: 1px solid rgba(0, 0, 0, .1);
 }
 .content_list{
-	width: 1000px;
+	width: 65%;
 	height: 400px;
 	/* border: 1px solid #000; */
 }
